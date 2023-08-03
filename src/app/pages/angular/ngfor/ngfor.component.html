@@ -1,0 +1,55 @@
+<div class="contentBox">
+    <h2 class="heading">ngFor</h2>
+    
+    <ol>
+        <li>
+            NgFor is a structual directive means, it change the structure of the DOM
+        </li>
+        <li>
+            It's point is to repeat a given HTML template once for each value in an array, each time
+            passing it the array value as context for string interpolation or binding.
+        </li>
+        <li>
+            The syntax is *ngFor="let &lt;value&gt; of &lt;collection&gt;"
+        </li>
+        <li>
+            &lt;value&gt; is a variable name of your choosing, &lt;collection&gt; is property on your component 
+                which holds a collection, usually an array but anything that can be iterated over in a for loop.
+        </li>
+    </ol>
+
+<!-- <ol>
+    <strong>*ngFor - local variable</strong>
+    <li>
+        <strong>Index</strong>
+         - Used for provide the index for current element while iteration.
+    </li>
+    <li>
+        <strong>First</strong>  - Return true if current element is first element in the iteration otherwise false.
+    </li>
+    <li>
+       <strong>Last</strong>  - Return true if current element is last element in the iteration otherwise false.
+    </li>
+    <li>
+      <strong>Even</strong> - Return true if current element is even element based on index in the iteration otherwise false.
+    </li>
+    <li>
+        <strong>Odd</strong> - Return true if current element is odd element based on index in the iteration otherwise false.
+    </li>
+</ol>
+
+<p>
+    &lt;ul&gt;
+        &lt;li *ngFor="let student of Students; let i=index; let f=first; let l=last; let ev=even; let od=odd"&gt;
+            &#123; &#123;i+1&#125;&#125; - &#123; &#123;student.name&#125;&#125;- &#123; &#123;f&#125;&#125; - &#123; &#123;l&#125;&#125; - &#123; &#123;ev&#125;&#125; - &#123; &#123;od&#125;&#125;
+        &lt;/li&gt;
+    
+    &lt;/ul&gt;
+</p> -->
+
+
+
+</div>
+<strong>Here's an example of how to use *ngFor:</strong>
+
+<iframe src="https://ng-run.com/edit/nThi4BDAv84cHD2ersZ2" frameborder="0" width="100%" height="500px"></iframe>

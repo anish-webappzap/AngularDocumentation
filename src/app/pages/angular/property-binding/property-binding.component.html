@@ -1,0 +1,22 @@
+<div class="contentBox">
+    <h2 class="heading">Property Binding</h2>
+
+    <ol>
+        <li>It is used to bind values of component/model properties to the HTML element.</li>
+        <li>Depending on the values, it will change the existing behavior of the element.</li>
+        <li> <strong> Syntax - [property]='expression'</strong></li>
+        <li>In property binding, there is source and target. For this example, we can define it
+            as [innerHTML]='firstname'. Here, innerHTML is a target is a property of span tag
+            and source is a component property i.e. firstname</li>
+    </ol>
+
+    <span>
+        in .ts file <br>
+        title="Hello World"; <br> <br>
+        in .html file <br>
+        &lt;span [innerHTML]="title"&gt;&lt;span&gt;
+    </span>
+
+</div>
+
+<iframe src="https://ng-run.com/edit/0XADT7eFRQkXqCa7dier" frameborder="0" width="100%" height="500px"></iframe>

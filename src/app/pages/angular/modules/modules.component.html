@@ -1,0 +1,43 @@
+<div class="contentBox">
+    <h2 class="heading">
+        Modules
+    </h2>
+
+    <p>
+        Modules play a crucial role in organizing and structuring an application. Modules are containers for different
+        components, services, directives, and other code related to a specific feature or functionality. They help in
+        managing the application's dependencies, code encapsulation, and separation of concerns.
+    </p>
+    <strong>Here are the main types of modules in Angular:</strong>
+    <ul>
+        <li>
+            <strong>Root Module (AppModule): </strong>
+            The root module, often referred to as AppModule, is the entry point of an Angular
+            application. It is responsible for bootstrapping the application and importing other modules. The root
+            module is created automatically when you generate a new Angular project using the Angular CLI.
+        </li>
+        <li>
+            <strong>Feature Modules:</strong>
+            Feature modules are used to group related components, services, and other code that are
+            dedicated to a specific feature or functionality within the application. Feature modules promote modularity
+            and reusability by encapsulating the functionality within a separate module. These modules can be created
+            manually using the Angular CLI or generated using schematics.
+        </li>
+        <li>
+            <strong>Shared Modules: </strong>
+            Shared modules contain components, directives, pipes, and services that are shared across
+            multiple feature modules. They help in promoting code reusability by encapsulating common functionality.
+            Shared modules are typically used to export and share commonly used components, directives, and services
+            among multiple modules.
+        </li>
+        <li>
+            <strong> Core Module:</strong>
+            The core module is a special module that contains singleton services and other components that
+            are used across the application but not shared with external modules. It is responsible for providing
+            application-wide services, initialization logic, and global configurations. The core module helps in keeping
+            the root module clean and focused on the bootstrap process.
+        </li>
+    </ul>
+
+    <!-- cmd: ng g m module_name -->
+</div>

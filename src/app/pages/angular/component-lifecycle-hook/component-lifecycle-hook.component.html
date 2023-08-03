@@ -1,0 +1,50 @@
+<div class="contentBox">
+    <h2 class="heading">Component Life Cycle Hook</h2>
+    <p>Component lifecycle hooks in Angular allow you to tap into different stages of a component's lifecycle and
+        perform actions accordingly. Here are the main component lifecycle hooks available in Angular:</p>
+
+    <ol>
+        <li>
+            <strong>ngOnChanges():</strong>
+            Called when any data-bound input properties of a component change. It receives a SimpleChanges object
+            containing the previous and current values of the changed properties.
+        </li>
+        <li>
+
+            <strong>ngOnInit():</strong>
+            Called once after the component is initialized and the input properties are set. It is commonly used for
+            initialization tasks such as retrieving data from a service.
+        </li>
+
+        <li>
+            <strong>ngDoCheck():</strong>
+            Called during every change detection cycle, allowing you to implement custom change detection
+            logic. Use this hook with caution as it can affect performance if not used properly.
+        </li>
+        <li>
+            <strong>ngAfterContentInit():</strong>
+            Called after the component's content (transcluded or projected content) has been
+            initialized.
+        </li>
+        <li>
+            <strong>ngAfterContentChecked():</strong>
+            Called after the component's content has been checked for changes.
+        </li>
+        <li>
+            <strong>ngAfterViewInit():</strong>
+            Called after the component's view and its child views have been initialized.
+        </li>
+        <li>
+            <strong>
+                ngAfterViewChecked():
+            </strong>
+            Called after the component's view and its child views have been checked for changes.
+        </li>
+
+        <li>
+            <strong>ngOnDestroy():</strong>
+            Called just before the component is destroyed and removed from the DOM. It is used for cleanup
+            tasks such as unsubscribing from observables or clearing intervals.
+        </li>
+    </ol>
+</div>

@@ -1,0 +1,14 @@
+<section class="angular">
+    <div class="leftSection">
+        <div class="codeSnippets">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="rightSection">
+        <h2>Angular Topics:</h2>
+        <ul class="topicList">
+            <li *ngFor="let item of playList;index as i" (click)="activeClass(item)"
+                [class.active]="classActive==item.name" routerLink="{{item.url}}">{{i+1}}. {{item.name}}</li>
+        </ul>
+    </div>
+</section>

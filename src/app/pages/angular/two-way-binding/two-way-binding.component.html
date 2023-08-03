@@ -1,0 +1,32 @@
+<div class="contentBox">
+    <h2 class="heading">Two Way Data Binding</h2>
+    <p>
+        The most popular and widely used data binding mechanism is two-way binding in the
+        angular framework. Basically two-way binding mainly used in the input type field or any
+        form element where user type or provide any value or change any control value in the one
+        side, and on the other side, the same automatically updated in to the controller variables
+        and vice versa.
+    </p>
+
+    <p>
+        In simple words, two-way data binding is a combination of both Property Binding
+        and Event Binding.
+        &lt;input [value]='data1' (input)='data=$event.target.value'&gt;
+    </p>
+
+    <p>
+        Binding using [(ngModel)] directive
+    </p>
+
+    <p>
+        ngModel directive which combines the square brackets of property binding with the parentheses of
+        event binding in a single notation.
+    </p>
+    <p>
+        &lt;input [(ngModel)]='data'&gt;
+    </p>
+
+
+</div>
+
+<iframe src="https://ng-run.com/edit/EEqWYMBFq9G99FiAnZ8T" frameborder="0" width="100%" height="500px"></iframe>

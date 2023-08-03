@@ -1,1 +1,246 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    padding: 10px 20px;
+}
+
+.btn {
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .left {
+        display: flex;
+        gap: 20px;
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+
+            li {
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                    text-align: center;
+                    color: #000;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 115%;
+                    left: -5px;
+                    width: 0%;
+                    height: 2px;
+                    background: #000;
+                    transition: 0.3s;
+                }
+
+                &:hover::before {
+                    width: 130%;
+                }
+            }
+        }
+    }
+
+    .right {
+        .user {
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            $wh: 40px;
+            height: $wh;
+            width: $wh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+    }
+}
+
+.angular {
+    display: flex;
+
+    .leftSection {
+        width: 60%;
+        padding: 10px;
+    }
+
+    .rightSection {
+        width: 40%;
+        padding: 10px;
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        .topicList {
+            list-style: none;
+
+
+            li {
+
+                cursor: pointer;
+                font-weight: 400;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                transition: 0.3s;
+
+                &.active {
+                    background: #000;
+                    color: #fff;
+                }
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .imgBox {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 70%;
+        }
+    }
+}
+
+.card {
+    .cards {
+        .cardBox {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            gap: 10px;
+            cursor: pointer;
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .subTitle {
+                font-size: 12px;
+
+            }
+        }
+    }
+}
+
+.codeSnippets {
+    // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
+    background: white;
+    margin-top: 10px;
+    position: sticky;
+    top: 80px;
+    overflow: hidden;
+}
+
+.contentBox {
+    margin-bottom: 10px;
+}
+
+p,
+li {
+    margin: 1rem 0;
+}
+
+.code-palette {
+    background: black;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    min-width: 50%;
+    max-width: 75%;
+    line-height: 30px;
+    overflow-x: auto;
+    margin:10px 0;
+}
+
+.instructions {
+    font-weight: 500;
+    color: rgb(130, 130, 130);
+}
+
+.highlight {
+    color: #7fed1e;
+}
+
+.topic_list {
+    // list-style: none;
+    padding: 0 20px;
+
+    li {
+        font-weight: 500;
+        &:hover{
+            color: gray;
+            cursor: pointer;
+        }
+    }
+}
+.img_box{
+    width: 75%;
+}

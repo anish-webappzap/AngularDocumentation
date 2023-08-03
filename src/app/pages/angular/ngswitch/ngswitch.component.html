@@ -1,0 +1,52 @@
+<div class="contentBox">
+    <h2 class="heading">ngSwitch</h2>
+
+    <ol>
+        <li>
+            ngSwitch is actually comprised of two directives, and atttribute directive and a structural
+            directive. It's very similar to a switch statement in Javascript and other programming
+            languages, but in the template.
+        </li>
+        <li>
+            The ng-switch directive lets you hide/show HTML elements depending on an expression.
+        </li>
+        <li>
+            We can also define a default section, by using the ng-switch-default directive, to show a
+            section if none of the other sections get a match.
+        </li>
+        <li>
+            Three things to keep in mind - ngSwitch, ngSwitch, ngSwitchDefault
+        </li>
+    </ol>
+
+
+
+    <p>
+        &lt;select (change)="fun($event)"&gt; <br>
+        &lt;option value="fridge"&gt;fridge&lt;/option&gt; <br>
+        &gt;option value="TV">TV&lt;/option&gt; <br>
+        &lt;/select&gt;
+    </p>
+
+
+    <p>
+        &lt;div [ngSwitch]="choose"&gt; <br>
+        &lt;h3 *ngSwitchDefault&gt;Please Choose&lt;/h3&gt; <br>
+        &lt;h3 *ngSwitchCase="'fridge'"&gt;fridge&lt;/h3&gt; <br>
+        &lt;h3 *ngSwitchCase="'TV'"&gt;TV&lt;/h3&gt; <br>
+        &lt;/div&gt;
+    </p>
+
+
+    <p>
+
+        choose=""; <br>
+        fun(val:any)&#123; <br>
+        this.choose=val.target.value; <br>
+        &#125;
+
+    </p>
+
+</div>
+<strong>Here's an example of how to use *ngSwitch:</strong>
+<iframe src="https://ng-run.com/edit/g4OS9RA6Y7ct7wtkS1wl" frameborder="0" width="100%" height="500px"></iframe>

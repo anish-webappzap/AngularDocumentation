@@ -1,0 +1,108 @@
+<div class="contentBox">
+    <h2> @View child</h2>
+
+    <!-- <ol>
+        <li>
+            When building an application with Angular you may come across the following annotations:
+        </li>
+        <li>
+            @ViewChild
+        </li>
+        <li>
+            @ViwChildren
+        </li>
+        <li>
+            @ContentChild
+        </li>
+        <li>
+            @ContentChildren
+        </li>
+    </ol>
+
+    <ol>
+        <li>
+            ViewChild are used for component communication in Angular. Therefore, if a parent component wants access
+            of child component then it uses ViewChild. Any component, directive, or element which is part of a template
+            is ViewChild
+        </li>
+        <li>
+            @ViewChild() decorator can be used to get the first element or the directive matching the selector
+            from the view DOM. @ViewChild() provides the instance of another component or directive in a parent
+            component
+            and then parent component can access the methods and properties of that component or directive. In a parent
+            component we can use @ViewChild() for components, directives and template reference variable with ElementRef
+            or TemplateRef. To use @ViewChild() we need to pass child component name or directive name or template
+            variable
+            as an argument.
+        </li>
+        <li>
+            If you want to access following inside the parent component, use @ViewChild decorator of Angular.
+            <ol>
+                <li>
+                    Child component
+                </li>
+                <li>
+                    directive
+                </li>
+                <li>
+                    DOM element
+                </li>
+            </ol>
+
+        </li>
+        <li>
+            @ViewChild() can be used for component communication. A component will get instance of
+            another component inside it using @ViewChild(). In this way parent component will be able
+            to access the properties and methods of child component. The child component selector will
+            be used in parent component HTML template.
+        </li>
+    </ol>
+
+
+    <p>
+        create two component <br>
+        counter <br>
+        counter-parent <br> <br>
+
+        counter.component.html <br>
+        &lt;p&gt;&#123; &#123;message&#125; &#125;&lt;/p&gt; <br> <br>
+
+        counter.component.ts <br>
+        message:string=''; <br>
+        count:number=0; <br> <br>
+
+        increasebyone()&#123; <br>
+        this.count=this.count+1; <br>
+        this.message="counter :"+this.count; <br>
+        &#125; <br> <br>
+
+
+        decreasebyone()&#123; <br>
+        this.count=this.count-1 <br>
+        this.message="counter :"+this.count; <br>
+        &#125;<br> <br>
+
+        counter-parent.component.html <br>
+        &lt;button (click)="increase()"&gt;Increase&lt;/button&gt; <br>
+        &lt;button (click)="decrease()"&gt;Decrease&lt;/button&gt; <br>
+        &lt;app-counter&gt;&lt;/app-counter&gt; <br> <br>
+
+
+
+        counter-parent.component.ts <br>
+        @ViewChild(CounterComponent) counterComponent:CounterComponent | undefined; <br>
+        increase()&#123; <br>
+        this.counterComponent?.increasebyone(); <br>
+        &#125; <br>
+        decrease()&#123; <br>
+        this.counterComponent?.decreasebyone(); <br>
+        &#125; <br> <br>
+
+        app.component.html <br>
+        &lt;app-counter-parent&gt;&lt;/app-counter-parent&gt;
+
+    </p> -->
+
+<iframe src="https://ng-run.com/edit/HhXgEzCbaby4BTJoTTaA" frameborder="0" width="100%" height="500px"></iframe>
+
+</div>

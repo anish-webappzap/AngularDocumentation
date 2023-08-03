@@ -1,0 +1,240 @@
+<div class="contentBox">
+    <h2 class="heading">
+        Template Driven Form
+    </h2>
+
+
+    <ol>
+        <li>
+            Template driven forms are simple forms which can be used to develop forms.
+            These are called template-driven as everything that we are going to use in a
+            application is defined into the template that we are defining alogn with the
+            component.
+        </li>
+        <li>
+            Let's see step by step how we can develop and use these forms in the application.
+        </li>
+
+        <iframe src="https://ng-run.com/edit/a1qstaawVBv7JMRY3wns" frameborder="0" width="100%" height="500px"></iframe>
+
+        <!-- <li>
+            <strong>Prerequisite:</strong>
+            We need to import FormsModule in an Application module file (i.e. app.module.ts)
+            <ol>
+                <li>
+                    Template Driven Forms
+                </li>
+                <li>
+                    Easy to use.
+                </li>
+                <li>
+                    Suitable for simple scenarios and fails for complex scenarios.
+                </li>
+                <li>
+                    Similar to Angular 1.0.
+                </li>
+                <li>
+                    Two way data binding (using [(NgModel)] syntax).
+                </li>
+                <li>
+                    Minnimal component code.
+                </li>
+                <li>
+                    Automatic track of the form and its data.
+                </li>
+                <li>
+                    Unit testing is another challenge.
+                </li>
+            </ol>
+        </li>
+        <li>
+            app.component.html <br>
+            &lt;form (ngSubmit)=""&gt; <br>
+            &lt;label&gt;Name&lt;/label&gt; <br>
+            &lt;input type="text" name="name" ngModel&gt; <br>
+            &lt;button type="submit"&gt;Submit&lt;/button&gt; <br>
+            &lt;/form&gt;
+        </li>
+        <li>
+            <strong>NgForm</strong>
+            It is the directive which helps to create the control groups inside form directive. It is attached to the
+            &lt;form&gt;
+            element in HTML and supplements form tag with some aditional features. Some interesting things we can
+            say about View are that whenever we use the directive in the application view, we need to assign some
+            selector with it and the form is the said selector in our case. The next thing that we need to consider is
+            the
+            ngModel attribute that we have assigned to each HTML control. Let's see what this attribute does.
+        </li>
+        <li>
+            <strong>NgModel</strong>
+            When we add NgModel Directive to the control, all the inputs are registered in the NgForm.
+        </li>
+        <li>
+            It creates the instance of the FormControl class from Domain model and assigns it to the form control
+            element. This control keeps track of the user information and the state and validation status of the form
+            control.
+        </li>
+        <li>
+            Next important thing to consider is that when we use NgModel with the form tag or most importantly, with
+            the NgForm, we make use of the name property of HTML control. When we look at the
+            control is assigned a name property and we have added the NgModel attribute to the
+        </li>
+        <li>
+            <strong>Template Driven Forms</strong>
+            Two main functionalities offered by NgForm and NgModel are the permission to retrieving all the values of
+            the control associated with the form and then retrieving the overall state of controls in the form.
+        </li>
+        <li>
+            To expose ngForm in the application, we have used the following code snipet.
+        </li>
+        <li>
+
+
+            &lt;form #regForm='ngForm' (ngSubmit)="Register(regForm)"&gt;
+
+            <ol>
+                <li>
+                    In this, we are exporting the ngForm value in the local variable "regform". Now, the quesion arises,
+                    whether
+                </li>
+                <li>
+                    or not we need to use this local variable. Well, the answer is no. We are exporting ngForm in the
+                    local
+                    variable just to use some of the properties of the form and these properties are -
+                </li>
+                <ol>
+                    <li>
+                        <strong>regForm.Value:</strong>
+                        It gives the object containing all the values of the field in the form.
+                    </li>
+                    <li>
+                        <strong>regForm.Valid: </strong>
+                        This gives us the value indicating if the form is valid or not if it valid value is true <br>
+                        else value <br>
+                        is false.
+                    </li>
+                    <li>
+                        <strong>regForm.touched: </strong>
+                        It returns true or false when one of the field in the form is entered and touched.
+                    </li>
+
+                </ol>
+            </ol>
+        </li>
+        <li>
+            In the above case, we have noticed that the Form Tag has no action method or
+            attribute specified there, so how so we post the data in the component?
+        </li>
+        <li>
+            Let's have a look at the (ngSubmit)="Register(regForm)". Here, we are using the
+            Event Binding concept and we are binding which will call the Register method in
+            the component. Instead of the submit event of the form, we are using ngSubmit
+            which will send the actual HTTP request instead of just submitting the form.
+        </li>
+        <li>
+            app.component.ts
+
+            Register(regForm:NgForm)&#123; <br>
+            console.log(regForm); <br>
+            &#125; <br>
+        </li> -->
+    </ol>
+    <!-- <h2 class="heading">Template Driven Forms with Validation</h2>
+    <ol>
+        <li>
+            Validation is an important aspect of programming. We cannot trust the user that's
+            why we always want to validate the data. So, to prevent the user from entering
+            wrong data and show more proper value, we check and ask the users to add the proper data.
+        </li>
+        <li>
+            Angular set of common validators like minlength, maxlength, required, email. We just need
+            to add the validator directive to the control for assigning the controls the validators.
+
+        </li>
+        <li>
+            The following are the classes which will be attached whenever the state is changed.
+            *
+            *
+            *
+            *
+            *
+            *
+
+            <ul>
+                <li>
+                    <strong>ng-touched:</strong>
+                    Controls have been visited
+                </li>
+                <li>
+                    <strong>ng-untouched: </strong>
+                    Controls have not been visited
+                </li>
+                <li>
+                    <strong>ng-dirty:</strong>
+                    Control value has been changed
+                </li>
+                <li>
+                    <strong>ng-pristine: </strong>
+                    Controls value have not been changed
+                </li>
+                <li>
+                    <strong>ng-valid:</strong>
+                    control values are valid
+                </li>
+                <li>
+                    <strong>ng-invalid:</strong>
+                    control value are invalid
+                </li>
+            </ul>
+
+        </li>
+        <li>
+            So, in order to draw a border around the first name whenever a user visits
+            does not add any value, we need to use these classes.
+        </li>
+        <li>
+            Here is how - <br>
+            input.ng-invalid.ng-touched&#123; <br>
+            border-color:red; <br>
+            &#125;
+        </li>
+        <li>
+            in .html <br>
+            &lt;div class="container"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;form #regForm='ngForm' (ngSubmit)="register(regForm)"&gt; <br>
+            &lt;h2 class="text-center"&gt;Registration Page&lt;/h2&gt; <br>
+            &lt;div class="form-group"&gt; <br>
+            &lt;input type="text" class="form-control" placeholder="First Name" name="firstname" ngModel required&gt; <br>
+            &lt;/div&gt;<br>
+            <br>
+            &lt;div class="form-group"&gt; <br>
+            &lt;input type="text" class="form-control" placeholder="Last Name" name="lastname" ngModel required&gt; <br>
+            &lt;/div&gt; <br>
+            <br>
+            &lt;div class="form-group"&gt; <br>
+            &lt;input type="text" class="form-control" placeholder="Email" name="email" ngModel required email
+            #email="ngModel"&gt; <br>
+            &lt;span class="help-bpx" *ngIf="email.touched && !email.valid"&gt;Please Enter valid Email&lt;/span&gt;
+            &lt;/div&gt; <br>
+            <br>
+            &lt;button type="submit" class="btn btn-primary" [disabled]="!regForm.valid"&gt;Register&lt;/button&gt;
+            &lt;/form&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; 
+
+            <br> <br>
+            in .scss <br>
+            input.ng-invalid.ng-touched&#123;
+            border-color:red;
+            &#125;
+             <br><br>
+             in .ts file <br>
+             register(val:any)&#123;
+                console.log(val.value);
+                &#125;
+        </li>
+    </ol> -->
+
+</div>
+

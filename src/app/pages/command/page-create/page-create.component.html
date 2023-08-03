@@ -1,0 +1,69 @@
+<section class="command">
+    <h2>Page Creation</h2>
+    <p class="instructions">
+        Open Terminal (CTRL+Q) and enter these commands:
+    </p>
+    <div class="code-palette">
+        <pre>ng g m module_name --routing</pre>
+        <pre>ng g m module_name/page_name --flat</pre>
+    </div>
+    <p class="instructions">
+        Open Page Module and Declare Component
+    </p>
+    <div class="code-palette">
+        <pre>import &#123; NgModule &#125; from '@angular/core';</pre>
+        <pre>import &#123; CommonModule &#125;  from '@angular/common';</pre>
+
+        <pre>import &#123; CommandRoutingModule &#125; from './command-routing.module';</pre>
+        <pre class="highlight">import &#123; Component_Name &#125; from './Path';</pre>
+
+        <pre>@NgModule(&#123;</pre>
+        <pre>declarations: [</pre>
+        <pre class="highlight">   Component_Name</pre>
+        <pre>],</pre>
+        <pre>imports: [ </pre>
+        <pre>   CommonModule, </pre>
+        <pre>   CommandRoutingModule </pre>
+        <pre>]</pre>
+        <pre>&#125;)</pre>
+        <pre>export class CommandModule &#123; &#125; </pre>
+
+    </div>
+    <p class="instructions">
+        Now Open Module_Routing and Set the path:
+    </p>
+    <div class="code-palette">
+        <pre>import &#123; NgModule &#125; from '@angular/core'; </pre>
+        <pre>import &#123; RouterModule, Routes &#125; from '@angular/router'; </pre>
+        <pre class="highlight">import &#123; Component_Name &#125; from './Path';  </pre>
+
+        <pre>const routes: Routes = [</pre>
+        <pre class="highlight"> &#123;path:'',component:Component_Name&#125; </pre>
+        <pre>];</pre>
+
+        <pre>@NgModule(&#123;</pre>
+        <pre>imports: [RouterModule.forChild(routes)],</pre>
+        <pre>exports: [RouterModule] </pre>
+        <pre>&#125;)</pre>
+        <pre>export class CommandRoutingModule &#123; &#125;</pre>
+
+    </div>
+    <p class="instructions">
+        Now Add Lazy Loading in app-routing.module.ts :
+    </p>
+    <div class="code-palette">
+        <pre>import &#123; NgModule &#125; from '@angular/core';</pre>
+        <pre>import &#123; RouterModule, Routes &#125; from '@angular/router';</pre>
+
+        <pre>const routes: Routes = [</pre>
+        <pre class="highlight"> &#123; path: '', loadChildren: () => import('./Page_Name/Component_Name.module').then(m => m.Module_Name) &#125;</pre>
+        <pre>];</pre>
+
+        <pre>@NgModule(&#123;</pre>
+        <pre>imports: [RouterModule.forRoot(routes)],</pre>
+        <pre>exports: [RouterModule]</pre>
+        <pre> &#125;)</pre>
+        <pre>export class AppRoutingModule &#123; &#125;</pre>
+
+    </div>
+</section>

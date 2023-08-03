@@ -1,0 +1,163 @@
+<div class="contentBox">
+    <h2 class="heading">Pipes</h2>
+    <ol>
+        <li>
+            Angular Pipes can be used to transform data to desired output.
+        </li>
+        <li>
+            Pipes takes in a data input and transforms data to a different output.
+        </li>
+        <li>
+            Using the Pipe operator (|), we can apply the Pipe's features to any of the property in our Angular Project.
+        </li>
+        <li>
+            Pipes (|) in Angular are used to transform the data before displaying it in a
+            browser. Angular provides a lot of built-in pipes to translate the data before
+            displaying it into the browser and as we know, Angular lets us extend its feature,
+            we can even create custom pipes in Angular.
+        </li>
+        <li>
+            For example, pipe can take "Learn Angular" as input and transform to "LEARN ANGULAR" in capital
+            or you can give input as "100" which you want to display (transform) as "100.00 $" on UI.
+        </li>
+        <li>
+            syntaxes are written inside HTML <br>
+            Input Data------------------------->Filter--------------------->Final output
+            &#123; &#123;'Test' |uppercase&#125; &#125;--------------->TEST
+        </li>
+        <li>
+            <strong>Types of Pipes</strong>
+            <ol>
+                <li>
+                    Built-In Pipes
+                </li>
+                <li>
+                    Parameterized Pipes
+                </li>
+                <li>
+                    Chaining Pipes
+                </li>
+                <li>
+                    Custom Pipes
+                </li>
+            </ol>
+
+
+
+
+        </li>
+    </ol>
+
+    <h2 class="heading">String Pipe</h2>
+    <ol>
+        <li>
+            <strong>Uppercase:</strong>
+            Converts the string type data to upper case in the UI.
+        </li>
+        <li>
+            <strong>Lowercase:</strong>
+            Converts the string type data to lower case in the UI.
+        </li>
+        <li>
+            <strong>Titlecase:</strong>
+            Converts the string type data in which the first alphabet of each word
+            is made capital and the rest will be in the small case.
+        </li>
+        <li>
+            <strong>Slice:</strong>
+            &lt;starting index&gt; It works on string fields or Array. It slices the input from the
+            index till the end of the string or array length.
+        </li>
+        <li>
+            <strong> Slice:</strong>
+            &lt;starting index&gt;:&lt;end index&gt; It workson string fields or array, It slices
+            the input from the starting index to the end index. (excluding the end index)
+        </li>
+    </ol>
+
+    <strong>Here's an example of how to use String Pipe:</strong>
+    <iframe src="https://ng-run.com/edit/hVWrFG2Ch8HP93xpAeHB" frameborder="0" width="100%" height="500px"></iframe>
+
+
+    <h2>Parameterized Pipe</h2>
+    <ol>
+        <li>
+            We can pass any number of paramters to the pipe using a colon (:)
+        </li>
+        <li>
+            data | pipeName: parameter 1 : parameter 2 : parameter 3 ... : parameter n
+        </li>
+        <li>
+            <strong>Syntax</strong>
+            <p>
+                Date- Short:-&#123; &#123;DOB | date:"short"&#125;&#125;
+            </p>
+        </li>
+        <li>
+            Currency - &#123; &#123;salary | currency:'USD':true&#125;&#125;
+        </li>
+    </ol>
+
+    
+
+
+    <p>
+        in .ts file <br>
+        dob=new Date(1986,8,2); <br>
+        salary:number=65000; <br> <br>
+
+        in .html file <br>
+        Medium: &#123; &#123;dob|date:"medium"&#125;&#125; <br>
+        Specific Format : &#123; &#123;dob|date:"dd/MM/yyyy"&#125;&#125; <br>
+        Medium Time: &#123; &#123;dob|date:"mediumTime"&#125;&#125; <br>
+
+        Salary :- &#123; &#123;salary|currency:"USD":true&#125;&#125;
+    </p>
+
+    <strong>Here's an example of how to use Parameterized Pipe</strong>
+    <iframe src="https://ng-run.com/edit/I7B7s7GwXGTf9saSL8FM" frameborder="0" width="100%" height="500px"></iframe>
+
+
+    <h2 class="heading">Chaining Pipe</h2>
+    <ol>
+        <li>
+            We can use multiple pipes with the same data at the same. This also referred to as
+            chaining pipes.
+        </li>
+        <li>
+            data | pipe 1 | pipe 2 | pipe 3 | ....... pipe n
+        </li>
+        <li>
+            data | pipe 1: parameter 1: parameter 2: parameter 3 ....: parameter n | pipe 2 :
+            parameter 1: parameter 2: parameter 3....: parameter n| pipe 3: parameter 1:
+            parameter 2: parameter 3.... : parameter n | ....... pipe n: parameter 1:
+            parameter 2: parameter 3.... : parameter n
+        </li>
+        <li>
+            .ts file <br>
+            dob=new Date(1986,8,2); <br><br>
+
+            .html file
+            &lt;span&gt; &#123; &#123; dob|date:"medium" | lowercase&#125;&#125;&lt;/span&gt;
+
+        </li>
+    </ol>
+
+    <strong>Here's an example of how to use Chaining Pipe:</strong>
+    <iframe src="https://ng-run.com/edit/ccWE2mlOSVlPM8KIQK1a" frameborder="0" width="100%" height="500px"></iframe>
+
+
+    <h2 class="heading">Custom Pipe</h2>
+    <ol>
+        <li>
+            To create a pipe in Angular 7, you have to apply the @Pipe decorator to class, which we can
+            import from the core Angular library.
+        </li>
+        <li>
+            The @Pipe decorator allows you to define the pipe name that you'll use within template expressions.
+        </li>
+       
+    </ol>
+    <iframe src="https://ng-run.com/edit/qv7ykQMULAN8p8ba640I" frameborder="0" width="100%" height="500px"></iframe>
+    
+</div>
