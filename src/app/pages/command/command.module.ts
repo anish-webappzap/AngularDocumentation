@@ -6,6 +6,12 @@ import { CommandComponent } from './command.component';
 import { PageCreateComponent } from './page-create/page-create.component';
 import { PrimengComponent } from './primeng/primeng.component';
 import { CreateComponentComponent } from './create-component/create-component.component';
+import { EchartsComponent } from './echarts/echarts.component';
+import { BuildApkComponent } from './build-apk/build-apk.component';
+import { ImageZoomComponent } from './image-zoom/image-zoom.component';
+import { NvmComponent } from './nvm/nvm.component';
+import { VersionDegradeComponent } from './version-degrade/version-degrade.component';
+import { UploadProjectGitComponent } from './upload-project-git/upload-project-git.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +19,13 @@ import { CreateComponentComponent } from './create-component/create-component.co
     PageCreateComponent,
     CommandComponent,
     PrimengComponent,
-    CreateComponentComponent
+    CreateComponentComponent,
+    EchartsComponent,
+    BuildApkComponent,
+    ImageZoomComponent,
+    NvmComponent,
+    VersionDegradeComponent,
+    UploadProjectGitComponent
   ],
   imports: [
     CommonModule,
