@@ -1,0 +1,185 @@
+<section class="command">
+    <h3>Echarts</h3>
+    <p class="instructions">
+        First of install Echarts
+    </p>
+    <div class="code-palette">
+        <pre>npm install echarts</pre>
+    </div>
+    <p class="instructions">
+        Now open TS file where you want use Echarts then follow below code
+    </p>
+    <div class="code-palette">
+        <pre>import &#123; Component &#125; from '@angular/core'; </pre>
+        <pre class="highlight">import * as echarts from 'echarts';</pre>
+
+        <pre>@Component(&#123;</pre>
+        <pre>selector: 'app-dashboard',</pre>
+        <pre>templateUrl: './dashboard.component.html',</pre>
+        <pre>styleUrls: ['./dashboard.component.scss']</pre>
+        <pre>&#125;)</pre>
+        <pre>export class DashboardComponent &#123;</pre>
+        <pre>ngOnInit() &#123;</pre>
+        <pre class="highlight">var chartDom = document.getElementById('main');</pre>
+        <pre class="highlight">var myChart = echarts.init(chartDom);</pre>
+        <pre class="highlight">var option;</pre>
+        <pre class="highlight">option = &#123;</pre>
+        <pre class="highlight">xAxis: &#123;</pre>
+        <pre class="highlight">       type: 'category',</pre>
+        <pre class="highlight">       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']</pre>
+        <pre class="highlight">&#125;,</pre>
+        <pre class="highlight">yAxis: &#123;</pre>
+        <pre class="highlight">      type: 'value'</pre>
+        <pre class="highlight">&#125;,</pre>
+        <pre class="highlight">series: [</pre>
+        <pre class="highlight">       &#123;</pre>
+        <pre class="highlight">   data: [120, 200, 150, 80, 70, 110, 130],</pre>
+        <pre class="highlight">   type: 'bar',</pre>
+        <pre class="highlight">   showBackground: true,</pre>
+        <pre class="highlight">   backgroundStyle: &#123;</pre>
+        <pre class="highlight">   color: 'rgba(180, 180, 180, 0.2)'</pre>
+        <pre class="highlight">       &#125;</pre>
+        <pre class="highlight">   &#125;</pre>
+        <pre class="highlight">]</pre>
+        <pre class="highlight"> &#125;;</pre>
+
+        <pre class="highlight">option && myChart.setOption(option);</pre>
+        <pre>   &#125;</pre>
+        <pre>&#125;</pre>
+    </div>
+    <p class="instructions">
+        In HTML file
+    </p>
+    <div class="code-palette">
+        <pre class="highlight">
+&lt;div id="main" style="width:200px;height: 200px;"&gt;&lt;/div&gt;</pre>
+    </div>
+
+    <p class="instructions">
+        Here gives the most common charts, which will be use in our project
+    </p>
+    <h3>
+        Pie Chart :
+    </h3>
+    <div class="code-palette">
+        <pre>import &#123; Component &#125; from '@angular/core'; </pre>
+        <pre class="highlight">import * as echarts from 'echarts';</pre>
+
+        <pre>@Component(&#123;</pre>
+        <pre>selector: 'app-dashboard',</pre>
+        <pre>templateUrl: './dashboard.component.html',</pre>
+        <pre>styleUrls: ['./dashboard.component.scss']</pre>
+        <pre>&#125;)</pre>
+        <pre>export class DashboardComponent &#123;</pre>
+        <pre>ngOnInit() &#123;</pre>
+
+
+        <pre class="highlight">   var chartDom = document.getElementById('pie');</pre>
+        <pre class="highlight">   var myChart = echarts.init(chartDom);</pre>
+        <pre class="highlight">   var option;</pre>
+
+        <pre class="highlight">   option = &#123;</pre>
+        <pre class="highlight">   tooltip: &#123;</pre>
+        <pre class="highlight">   trigger: 'item'</pre>
+        <pre class="highlight">   &#125;,</pre>
+        <pre class="highlight">   legend: &#123;</pre>
+        <pre class="highlight">   top: '5%',</pre>
+        <pre class="highlight">   left: 'center'</pre>
+        <pre class="highlight">   &#125;,</pre>
+        <pre class="highlight">   series: [</pre>
+        <pre class="highlight">   &#123;</pre>
+        <pre class="highlight">   name: 'Access From',</pre>
+        <pre class="highlight">   type: 'pie',</pre>
+        <pre class="highlight">   radius: ['40%', '70%'],</pre>
+        <pre class="highlight">   avoidLabelOverlap: false,</pre>
+        <pre class="highlight">   label: &#123;</pre>
+        <pre class="highlight">       show: false,</pre>
+        <pre class="highlight">       position: 'center'</pre>
+        <pre class="highlight">   &#125;,</pre>
+        <pre class="highlight">   emphasis: &#123;</pre>
+        <pre class="highlight">       label: &#123;</pre>
+        <pre class="highlight">       show: true,</pre>
+        <pre class="highlight">       fontSize: 40,</pre>
+        <pre class="highlight">       fontWeight: 'bold'</pre>
+        <pre class="highlight">   &#125;</pre>
+        <pre class="highlight"> &#125;,</pre>
+        <pre class="highlight">   labelLine: &#123;</pre>
+        <pre class="highlight">       show: false</pre>
+        <pre class="highlight">&#125;,</pre>
+        <pre class="highlight">data: [</pre>
+        <pre class="highlight">   &#123; value: 1048, name: 'Search Engine' &#125;,</pre>
+        <pre class="highlight">   &#123; value: 735, name: 'Direct' &#125;,</pre>
+        <pre class="highlight">   &#123; value: 580, name: 'Email' &#125;,</pre>
+        <pre class="highlight">   &#123; value: 484, name: 'Union Ads' &#125;,</pre>
+        <pre class="highlight">   &#123; value: 300, name: 'Video Ads' &#125;</pre>
+        <pre class="highlight">   ]</pre>
+        <pre class="highlight"> &#125;</pre>
+        <pre class="highlight">]</pre>
+        <pre class="highlight">  &#125;;</pre>
+
+        <pre class="highlight"> option && myChart.setOption(option);</pre>
+
+
+        <pre>&#125;</pre>
+        <pre>&#125;</pre>
+
+    </div>
+    <p class="instructions">
+        In HTML file
+    </p>
+    <div class="code-palette">
+        <pre class="highlight">
+&lt;div id="pie" style="width:200px;height: 200px;"&gt;&lt;/div&gt;</pre>
+    </div>
+    <h3>
+        Column Chart :
+    </h3>
+    <div class="code-palette">
+        <pre>import &#123; Component &#125; from '@angular/core'; </pre>
+        <pre class="highlight">import * as echarts from 'echarts';</pre>
+
+
+        <pre>
+
+@Component(&#123;</pre>
+        <pre>selector: 'app-dashboard',</pre>
+        <pre>templateUrl: './dashboard.component.html',</pre>
+        <pre>styleUrls: ['./dashboard.component.scss']</pre>
+        <pre>&#125;)</pre>
+        
+        <pre>export class DashboardComponent &#123;        
+        </pre>
+        <pre>ngOnInit() &#123;</pre>
+        <pre class="highlight">   var chartDom = document.getElementById('column');</pre>
+        <pre class="highlight">   var myChart = echarts.init(chartDom);</pre>
+        <pre class="highlight">   var option;</pre>
+
+        <pre class="highlight">   option = &#123;</pre>
+        <pre class="highlight">       xAxis: &#123;</pre>
+        <pre class="highlight">       type: 'category',</pre>
+        <pre class="highlight">       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']</pre>
+        <pre class="highlight">   &#125;,</pre>
+        <pre class="highlight">   yAxis: &#123;</pre>
+        <pre class="highlight">       type: 'value'</pre>
+        <pre class="highlight">   &#125;,</pre>
+        <pre class="highlight">   series: [</pre>
+        <pre class="highlight">   &#123;</pre>
+        <pre class="highlight">       data: [120, 200, 150, 80, 70, 110, 130],</pre>
+        <pre class="highlight">       type: 'bar'</pre>
+        <pre class="highlight">   &#125;</pre>
+        <pre class="highlight">]</pre>
+        <pre class="highlight">&#125;;</pre>
+
+        <pre class="highlight">   option && myChart.setOption(option);</pre>
+
+
+
+
+        <pre>
+
+&#125;</pre>
+        <pre>&#125;</pre>
+
+    </div>
+
+</section>
